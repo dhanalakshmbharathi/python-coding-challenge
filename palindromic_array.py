@@ -4,3 +4,5 @@ for n in nums:
     if((k[::-1])!=(k[::])):
         print(0)
 print(1)
+
+
