@@ -2,6 +2,9 @@
 
 
 
+from email import header
+
+
 class Node():
     def __init__(self,value):
         self.value=value
@@ -52,15 +55,24 @@ class SLL():
             print(f"{tempnode.value}-->",end=" ")
             tempnode=tempnode.next
     def detect_loop_r(self):
-        s,f=self.head
-        k=False
+        s=self.head
+        f=self.head
         while(f and f.next):
             s=s.next
             f=f.next.next
             if s==f:
+                break
+            if(s==f):
                 s=self.head
-                while(f.next!=)
-                
+                if(s==f):
+                    while(f.next!=s):
+                        f=f.next   
+                    f.next=None
+                else:
+                    while(s.next!=f.next):
+                        s=s.next
+                        f=f.next
+                    f.next=None                
 s1=SLL()
 s1.insertSLL(1)
 s1.insertSLL(2)
