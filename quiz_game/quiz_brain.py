@@ -6,6 +6,7 @@ class Quiz_Brain:
     def next_question(self):
         question=self.question_list[self.question_number]
         self.question_number+=1
+        print("\n")
         user_ans=input(f"Q.{self.question_number}: {question.text} (True/False): \n")
         self.check_answer(user_ans,question.answer)
     def still_has_questions(self):
